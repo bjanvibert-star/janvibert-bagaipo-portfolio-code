@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janvibert's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <section id="profile" class="card">
+      <img src="bretbret.jpg" alt="Janvibert Bagaipo">
+      <h2>Janvibert Bagaipo</h2>
+      <p>BSIT - 2D</p>
+      <button onclick="showSection('menu')">CLICK ME</button>
+    </section>
+
+    <section id="menu" class="card hidden">
+      <h3>Navigation</h3>
+      <button onclick="showSection('about')">ABOUT ME</button>
+      <button onclick="showSection('skills')">SKILLS</button>
+      <button onclick="showSection('project')">PROJECT</button>
+      <br><button onclick="showSection('profile')">BACK</button>
+    </section>
+
+    <section id="about" class="card hidden">
+      <h3>ABOUT ME</h3>
+      <p>
+        I'm Janvibert C. Bagaipo and I'm 19 years old from Ibabao, Cordova, Cebu. I'm a BSIT student with a strong foundation in programming, networking, and database management. I'm passionate about solving real-world problems through technology and continuously improving my skills in areas like cybersecurity, cloud computing, and software development.
+      </p>
+      <button onclick="showSection('profile')">HOME</button>
+      <button onclick="showSection('menu')">BACK</button>
+    </section>
+
+    <section id="skills" class="card hidden">
+      <h3>SKILLS</h3>
+      <ul class="skills-list">
+        <li><img src="html.jpg" alt="HTML"> HTML</li>
+        <li><img src="css.jpg" alt="CSS"> CSS</li>
+        <li><img src="figma.jpg" alt="Figma"> Figma</li>
+      </ul>
+      <button onclick="showSection('profile')">HOME</button>
+      <button onclick="showSection('menu')">BACK</button>
+    </section>
+
+    <section id="project" class="card hidden">
+      <div class="project-card">
+      <img src="project.jpg" alt="Project">
+      <p>
+        HTML, or HyperText Markup Language, is the standard language used to create and structure web pages. It uses tags to define elements like headings, paragraphs, images, links, and tables, telling the browser how to display the content. HTML is not a programming language—it focuses on organizing and presenting information, often working together with CSS for design and JavaScript for interactivity. In short, HTML is the backbone of every website, forming the foundation upon which everything else is built.
+      </p>
+    </div>
+      <button onclick="showSection('profile')">HOME</button>
+      <button onclick="showSection('menu')">BACK</button>
+    </section>
+
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll(".card");
+      sections.forEach(section => section.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
